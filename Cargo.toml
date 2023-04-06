@@ -5,7 +5,7 @@ authors = ["naturecodevoid"]
 homepage = "https://github.com/naturecodevoid/paris-log"
 repository = "https://github.com/naturecodevoid/paris-log"
 documentation = "https://docs.rs/paris-log"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2021"
 license = "MIT"
 
