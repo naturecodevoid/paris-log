@@ -1,0 +1,22 @@
+[package]
+name = "paris-log"
+description = "A crate that allows you to use paris's formatting with the log crate."
+authors = ["naturecodevoid"]
+homepage = "https://github.com/naturecodevoid/paris-log"
+repository = "https://github.com/naturecodevoid/paris-log"
+documentation = "https://docs.rs/paris-log"
+version = "1.0.0"
+edition = "2021"
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+icons = []
+
+[dependencies]
+log = "0.4"
+paris = { version = "1.5", features = ["no_logger"] }
+
+[dev-dependencies]
+simplelog = "0.12"
