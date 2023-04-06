@@ -63,6 +63,13 @@ mod icons;
 #[cfg(not(feature = "icons"))]
 mod normal;
 
+// Do not use directly, this is just so we can use `log` and `paris` even if they aren't directly defined as dependencies
+#[doc(hidden)]
+pub mod __private_exports {
+    pub use log::{debug, error, info, trace, warn};
+    pub use paris::formatter::colorize_string;
+}
+
 #[cfg(test)]
 mod tests {
     use log::LevelFilter;
