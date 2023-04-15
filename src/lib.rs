@@ -64,16 +64,10 @@ mod icons;
 mod normal;
 
 // Do not use directly, this is just so we can use `log` and `paris` even if they aren't directly defined as dependencies
-// Export names are changed to make it harder to appear in editor autocomplete since `#[doc(hidden)]` doesn't seem to work.
 #[doc(hidden)]
-pub mod __private_exports_do_not_use {
-    #[doc(hidden)]
-    pub use log::{
-        debug as __export_debug, error as __export_error, info as __export_info,
-        trace as __export_trace, warn as __export_warn,
-    };
-    #[doc(hidden)]
-    pub use paris::formatter::colorize_string as __export_colorize_string;
+pub mod __private {
+    pub use log::{debug, error, info, trace, warn};
+    pub use paris::formatter::colorize_string;
 }
 
 #[cfg(test)]
